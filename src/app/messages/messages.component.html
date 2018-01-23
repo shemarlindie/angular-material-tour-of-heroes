@@ -1,0 +1,9 @@
+<div>
+  <mat-list>
+    <h5 mat-subheader>{{messageService.messages.length || 'no'}} recent message(s).</h5>
+    <mat-list-item *ngFor="let message of messageService.messages; let i = index;">
+      <div>{{message}}</div>
+      <mat-divider></mat-divider>
+    </mat-list-item>
+  </mat-list>
+</div>

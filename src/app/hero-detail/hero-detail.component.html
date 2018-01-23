@@ -1,0 +1,32 @@
+<div *ngIf="hero">
+  <mat-card>
+    <!--<mat-card-header>-->
+    <!--<div mat-card-avatar style="background: url('/favicon.ico') center center no-repeat;"></div>-->
+    <mat-card-title><strong>{{hero.name | uppercase}}</strong> Details</mat-card-title>
+    <mat-card-subtitle>
+      <small>HERO</small>
+    </mat-card-subtitle>
+    <!--</mat-card-header>-->
+
+    <mat-card-content>
+      <div>
+        <div>
+          <span>ID: </span>
+          <strong>{{hero.id}}</strong>
+        </div>
+        <div>
+          <span>Name: </span>
+          <strong>{{hero.name}}</strong>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card>
+    <form name="heroForm">
+      <mat-form-field>
+        <input matInput name="name" [(ngModel)]="hero.name" placeholder="Name">
+      </mat-form-field>
+    </form>
+  </mat-card>
+</div>

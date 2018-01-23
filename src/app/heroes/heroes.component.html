@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-card-content>
+    <mat-list class="heroes">
+      <mat-list-item *ngFor="let hero of heroes">
+        <button mat-button [class.mat-primary]="hero == selectedHero" (click)="onSelect(hero)">
+          <span class="badge">{{hero.id}}</span>
+          <span>{{hero.name}}</span>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
