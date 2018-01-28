@@ -13,7 +13,7 @@ export class MessageService {
 
   add(message: string) {
     if (message) {
-      this.messages.push(message);
+      this.messages.unshift(message);
 
       // use setTimeout as workaround for ExpressionChangedAfterItHasBeenCheckedError
       const self = this;
