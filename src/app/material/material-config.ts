@@ -1,5 +1,6 @@
 import {
-  MatButtonModule, MatCardModule, MatCheckboxModule, MatFormFieldModule, MatIconModule, MatInputModule, MatListModule, MatProgressBarModule,
+  MatButtonModule, MatCardModule, MatCheckboxModule, MatFormFieldModule, MatGridListModule, MatIconModule, MatInputModule, MatListModule,
+  MatProgressBarModule,
   MatProgressSpinnerModule, MatSnackBarModule,
   MatToolbarModule
 } from '@angular/material';
@@ -16,6 +17,7 @@ export class MaterialConfig {
     MatListModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatGridListModule
   ];
 }

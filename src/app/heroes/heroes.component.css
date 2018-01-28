@@ -1,7 +1,11 @@
 /* HeroesComponent's private CSS styles */
 
-.heroes .badge {
+.badge {
   border: 1px dashed rgba(0, 0, 0, 0.1);
   padding: 4px;
   font-weight: bold;
+}
+
+.hero-link {
+  margin-left: 12px;
 }

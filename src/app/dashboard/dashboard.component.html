@@ -1,0 +1,9 @@
+<mat-card>
+  <mat-card-title>Top Heroes</mat-card-title>
+
+  <mat-card-content>
+    <mat-grid-list cols="4" rowHeight="2:1" gutterSize="5">
+      <mat-grid-tile routerLink="/detail/{{hero.id}}" *ngFor="let hero of heroes">{{hero.name}}</mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
+</mat-card>

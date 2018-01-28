@@ -4,5 +4,9 @@
     <span>{{ title }}</span>
   </mat-toolbar-row>
 </mat-toolbar>
-<app-heroes></app-heroes>
+<nav fxLayout="row">
+  <a mat-button class="mat-primary" routerLink="/dashboard">Dashboard</a>
+  <a mat-button class="mat-primary" routerLink="/heroes">Heroes</a>
+</nav>
+<router-outlet></router-outlet>
 <app-messages></app-messages>

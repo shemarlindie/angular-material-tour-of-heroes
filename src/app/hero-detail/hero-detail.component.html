@@ -23,10 +23,16 @@
   </mat-card>
 
   <mat-card>
-    <form name="heroForm">
-      <mat-form-field>
-        <input matInput name="name" [(ngModel)]="hero.name" placeholder="Name">
-      </mat-form-field>
-    </form>
+    <mat-card-content>
+      <form name="heroForm">
+        <mat-form-field>
+          <input matInput name="name" [(ngModel)]="hero.name" placeholder="Name">
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button mat-button (click)="goBack()">Back</button>
+    </mat-card-actions>
   </mat-card>
 </div>
