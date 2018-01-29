@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-card-content>
+    <div id="search-component">
+      <mat-form-field>
+        <input matInput #searchBox id="search-box" placeholder="Hero Search" (keyup)="search(searchBox.value)"/>
+      </mat-form-field>
+
+      <mat-nav-list dense>
+        <h6 mat-subheader>Search results for "{{searchBox.value}}".</h6>
+        <a mat-list-item *ngFor="let hero of heroes$ | async" routerLink="/detail/{{hero.id}}">
+          <span>{{hero.name}}</span>
+        </a>
+      </mat-nav-list>
+    </div>
+  </mat-card-content>
+</mat-card>

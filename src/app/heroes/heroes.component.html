@@ -1,10 +1,24 @@
 <mat-card>
   <mat-card-content>
+    <div>
+      <mat-form-field>
+        <input matInput placeholder="Add Hero" #heroName>
+      </mat-form-field>
+
+      <!-- (click) passes input value to add() and then clears the input -->
+      <button mat-button color="primary" (click)="add(heroName.value); heroName.value=''">ADD</button>
+    </div>
+
     <mat-nav-list class="heroes">
-      <a routerLink="/detail/{{hero.id}}" mat-list-item *ngFor="let hero of heroes">
-        <span class="badge">{{hero.id}}</span>
-        <span class="hero-link">{{hero.name}}</span>
-      </a>
+      <div fxLayout="row" fxLayoutAlign="start center" *ngFor="let hero of heroes">
+        <a routerLink="/detail/{{hero.id}}" mat-list-item fxFlex>
+          <span class="badge">{{hero.id}}</span>
+          <span class="hero-link" fxFlex>{{hero.name}}</span>
+        </a>
+        <button mat-icon-button class="delete" title="delete hero" (click)="delete(hero)">
+          <mat-icon>close</mat-icon>
+        </button>
+      </div>
     </mat-nav-list>
   </mat-card-content>
 </mat-card>

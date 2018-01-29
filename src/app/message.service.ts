@@ -24,9 +24,9 @@ export class MessageService {
       });
 
       // remove old messages
-      if (this.messages.length > MessageService.MAX_MESSAGE_COUNT) {
-        this.messages.splice(0, this.messages.length - MessageService.MAX_MESSAGE_COUNT);
-      }
+      // if (this.messages.length > MessageService.MAX_MESSAGE_COUNT) {
+      //   this.messages.splice(0, this.messages.length - MessageService.MAX_MESSAGE_COUNT);
+      // }
     }
   }
 

@@ -1,0 +1,8 @@
+.message-list {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.message {
+  font-family: monospace;
+}
